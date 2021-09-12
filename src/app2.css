@@ -1,0 +1,26 @@
+#app2{
+}
+#app2 > .tabBar{
+  display: flex;
+}
+#app2 > .tabBar > li{
+  width: 50%;
+  border: 1px solid #666;
+}
+#app2 > .tabBar > li.selected{
+  background-color: #666;
+  color: aliceblue;
+} 
+
+#app2 > .tabContent{
+  margin-top: 10vh;
+  margin-left: 24vw;
+}
+
+#app2 > .tabContent > li{
+  display: none;
+  
+}
+#app2 > .tabContent > li.active{
+  display: block;
+}

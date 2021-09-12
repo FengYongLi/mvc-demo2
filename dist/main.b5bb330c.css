@@ -1,0 +1,88 @@
+*{box-sizing: border-box;}
+*::after,::after{box-sizing: border-box;}
+*{margin: 0; padding: 0;}
+ol, ul{list-style: none;}body{
+  overflow: hidden;
+}
+body > .page{
+  display: flex;
+  flex-wrap: wrap;
+}
+body > .page > section{
+  width: 50vw;
+  height: 50vh;
+  border: 1px solid #666;
+}#app1{
+    
+}
+#app1 > .output{
+    margin-top: 10vh;
+    margin-left: 10vw;
+}
+#app1 > .actions{
+    margin-left: 10vw;
+}#app2{
+}
+#app2 > .tabBar{
+  display: flex;
+}
+#app2 > .tabBar > li{
+  width: 50%;
+  border: 1px solid #666;
+}
+#app2 > .tabBar > li.selected{
+  background-color: #666;
+  color: aliceblue;
+} 
+
+#app2 > .tabContent{
+  margin-top: 10vh;
+  margin-left: 24vw;
+}
+
+#app2 > .tabContent > li{
+  display: none;
+  
+}
+#app2 > .tabContent > li.active{
+  display: block;
+}
+#app3{
+}
+#app3 .square{
+  width: 10vw;
+  height: 10vw;
+  margin-top: 8vw;
+  margin-left: 10vw;
+  background-color: #666;
+  transition: transform 1s;
+}
+#app3 .square.active{
+  transform: translateX(15vw)
+}#app4{
+  
+}
+
+@keyframes change{
+  0%{
+    background-color: red;
+    width: 18vw;
+    height: 18vw;
+  }
+  100%{
+    background-color: blue;
+    width: 20vw;
+    height: 20vw;
+  }
+}
+#app4 .circle{
+  border: 1px solid #666;
+  width: 15vw;
+  height: 15vw;
+  border-radius: 50%;
+  margin-top: 3vh;
+  margin-left: 17vw;
+}
+#app4 .circle.active{
+  animation: change 1s infinite alternate linear;
+}
