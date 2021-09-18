@@ -1,12 +1,26 @@
 import $ from 'jquery'
 import '/app3.css'
 
+const html = `
+<section id="app3">
+  <div class="square"></div>
+</section>
+`
+const $element = $(html).appendTo($('.page'))
+
 const $square = $('#app3 .square')
 
+const localKey = 'zzz'
+const active = localStorage.getItem(localKey) === 'yes'
+$square.toggleClass('active', active)
+
+
 $square.on('click', () => {
-  //$square.addClass('active')
-  // 这时jquery内置的一个方法
-  // 如果有active就删除，如果没有就添加
-  // 这样可以控制点击左右易懂
-  $square.toggleClass('active')
+  if ($square.hasClass('active')) {
+    $square.removeClass('active')
+    localStorage.setItem(localKey, 'no')
+  } else {
+    $square.addClass('active')
+    localStorage.setItem(localKey, 'yes')
+  }
 })
