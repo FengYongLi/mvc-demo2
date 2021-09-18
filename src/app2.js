@@ -2,11 +2,10 @@ import './app2.css'
 import $ from 'jquery'
 
 const eventBus = $({})
-
 const localKey = 'yyy'
 const m = {
   data: {
-    index: parseInt(localStorage.getItem(localKey)) || 0
+    index: parseInt(localStorage.getItem('yyy')) || 0
   },
   create() { },
   delete() { },
@@ -43,7 +42,7 @@ const v = {
 const c = {
   init(container) {
     v.init(container)
-    v.render(m.data.index)
+    v.render(m.data.index) // view = render(data)
     c.autoBindEvents()
     // 在 container 这里监听
     eventBus.on('m:updated', () => {

@@ -11368,11 +11368,10 @@ var _jquery2 = _interopRequireDefault(_jquery);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var eventBus = (0, _jquery2.default)({});
-
 var localKey = 'yyy';
 var m = {
   data: {
-    index: parseInt(localStorage.getItem(localKey)) || 0
+    index: parseInt(localStorage.getItem('yyy')) || 0
   },
   create: function create() {},
   delete: function _delete() {},
@@ -11401,7 +11400,7 @@ var v = {
 var c = {
   init: function init(container) {
     v.init(container);
-    v.render(m.data.index);
+    v.render(m.data.index); // view = render(data)
     c.autoBindEvents();
     // 在 container 这里监听
     eventBus.on('m:updated', function () {
