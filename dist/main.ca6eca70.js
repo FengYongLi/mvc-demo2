@@ -11371,7 +11371,7 @@ var eventBus = (0, _jquery2.default)({});
 var localKey = 'yyy';
 var m = {
   data: {
-    index: parseInt(localStorage.getItem('yyy')) || 0
+    index: parseInt(localStorage.getItem(localKey)) || 0
   },
   create: function create() {},
   delete: function _delete() {},

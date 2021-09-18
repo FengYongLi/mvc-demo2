@@ -5,7 +5,7 @@ const eventBus = $({})
 const localKey = 'yyy'
 const m = {
   data: {
-    index: parseInt(localStorage.getItem('yyy')) || 0
+    index: parseInt(localStorage.getItem(localKey)) || 0
   },
   create() { },
   delete() { },
