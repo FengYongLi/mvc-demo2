@@ -12,7 +12,7 @@ const m = {
   update(data) {
     Object.assign(m.data, data)
     eventBus.trigger('m:updated')
-    localStorage.setItem('index', m.data.index)
+    localStorage.setItem('yyy', m.data.index)
   },
   get() { }
 }
